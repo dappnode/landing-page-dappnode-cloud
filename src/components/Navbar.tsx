@@ -39,7 +39,10 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
   };
 
   return (
-    <div className="relative -mb-14 w-full bg-gradient-to-b  from-dappnodePurple/30 via-dappnodePurple/15 via-20% pb-14 dark:from-dappnodePurple/15 lg:-mb-0 lg:px-10">
+    <div
+      className="w-fullpb-14 relative -mb-14 lg:-mb-0 lg:px-10"
+      style={{ zIndex: 10 }}
+    >
       <nav className="flex items-center justify-between  p-4 lg:p-6">
         <div className="flex items-center justify-start py-3">
           <button

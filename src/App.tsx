@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { FiArrowUp } from "react-icons/fi";
 import About from "./components/About";
 import "./App.css";
+import Hero from "./components/Hero";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState("light");
@@ -45,8 +46,11 @@ const App: React.FC = () => {
         "App flex min-h-screen flex-col bg-dappnodeBgLightLayout dark:bg-dappnodeBgDarkLayout"
       }
     >
-      <Navbar theme={theme} onThemeToggle={toggleTheme} />
       <main className="flex flex-1 flex-col gap-24 lg:gap-36 xl:gap-52">
+        <div className="bg-gradient-to-b  from-sky-300 via-10% to-dappnodeBgLight dark:from-indigo-950 dark:to-dappnodeBgDarkLayout">
+          <Navbar theme={theme} onThemeToggle={toggleTheme} />
+          <Hero />
+        </div>
         <About />
       </main>
       <Footer />
