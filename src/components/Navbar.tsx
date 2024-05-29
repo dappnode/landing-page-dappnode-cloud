@@ -17,18 +17,6 @@ const pages: {
     name: "About",
     path: "#about",
   },
-  {
-    name: "About",
-    path: "#about",
-  },
-  {
-    name: "About",
-    path: "#about",
-  },
-  {
-    name: "About",
-    path: "#about",
-  },
 ];
 
 const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
@@ -63,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
                 className="mr-4 h-12"
               />
               <span className="mt-3 text-xl font-bold text-gray-900 dark:text-white lg:text-2xl">
-                Landing Page
+                Dappnode
               </span>
             </div>
           </div>
@@ -73,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
         <div className="flex w-full flex-row items-center justify-center  pr-10 lg:hidden">
           <img src="dappnode-logo-only.png" alt="Logo" className="mr-4 h-8" />
           <span className="mt-3 text-xl font-bold text-gray-900 dark:text-white lg:text-2xl">
-            Landing Page
+            Dappnode
           </span>
         </div>
 
