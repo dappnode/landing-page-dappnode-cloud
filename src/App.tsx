@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Basics from "./components/Basics";
 import Benefits from "./components/Benefits";
 import HowItWorks from "./components/HowItWorks";
+import Carousel from "./components/Carousel";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState("light");
@@ -55,6 +56,7 @@ const App: React.FC = () => {
           <Hero />
           <Basics />
         </div>
+        <Carousel />
         <HowItWorks />
         <Benefits />
         <About />
