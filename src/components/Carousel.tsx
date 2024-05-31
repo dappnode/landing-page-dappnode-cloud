@@ -45,15 +45,26 @@ export default function Carousel() {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 2000);
+    const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval); // Clear interval on component unmount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   return (
     <div className="mx-[10%] flex flex-row gap-52">
-      <div className=" flex w-2/5 flex-col items-center justify-center gap-10 text-center">
-        <h2>{Slides[currentIndex].title}</h2>
-        <p>{Slides[currentIndex].text}</p>
+      <div className="relative min-h-max w-2/5">
+        <div className=" flex h-full flex-col items-center justify-center gap-10 text-center">
+          <h2>{Slides[currentIndex].title}</h2>
+          <p>{Slides[currentIndex].text}</p>
+        </div>
+        <div className="absolute bottom-32 left-[50%] mx-auto flex -translate-x-[50%] flex-row gap-5">
+          {Slides.map((slides, index) => (
+            <button
+              className={`h-3 w-3 rounded-full  ${index === currentIndex ? "bg-dappnodePurple" : "bg-gray-400"}`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
+        </div>
       </div>
       <div className="relative w-3/5 overflow-hidden">
         <div
@@ -70,15 +81,16 @@ export default function Carousel() {
             </div>
           ))}
         </div>
+
         <button
           onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 transform bg-gray-500 p-2 text-white"
+          className="absolute bottom-0 right-14 transform  p-2 text-2xl text-black transition-transform duration-300 ease-in-out hover:-translate-x-3 "
         >
           {"<"}
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 transform bg-gray-500 p-2 text-white"
+          className="absolute bottom-0 right-5  transform  p-2 text-2xl text-black transition-transform duration-300 ease-in-out hover:translate-x-3 "
         >
           {">"}
         </button>
