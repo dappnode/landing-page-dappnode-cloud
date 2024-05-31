@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <div className="relative flex h-[50vh] items-center justify-center overflow-hidden  ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="relative flex h-[50vh] items-center justify-center overflow-hidden  "
+    >
       {/*Initial clouds -> ONLY APPEAR ONCE */}
       <div className="absolute flex h-full w-screen translate-x-[100%] animate-cloud-initial">
         <CloudSvg color="#FC9E22" size={100} right="0px" top="100px" />
@@ -32,8 +39,11 @@ export default function Hero() {
       Where Your Nodes Fly High
       Elevate Your Blockchain Experience
       */}
-      <div className="relative">
+      <div className="flex flex-col text-center">
         <h1>Dappnode Cloud</h1>
+        <h3 className="text-3xl text-black dark:text-dappnodeDarkText">
+          No hardware? No Problem!
+        </h3>
       </div>
 
       {/*Slow clouds  */}
@@ -46,7 +56,7 @@ export default function Hero() {
         <CloudSvg color="#00B1F4" size={200} left="5px" top="0px" />
         <CloudSvg color="#9333ea" size={250} right="25%" bot="7%" />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

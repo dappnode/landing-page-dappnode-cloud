@@ -5,6 +5,9 @@ import { FiArrowUp } from "react-icons/fi";
 import About from "./components/About";
 import "./App.css";
 import Hero from "./components/Hero";
+import Basics from "./components/Basics";
+import Benefits from "./components/Benefits";
+import HowItWorks from "./components/HowItWorks";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState("light");
@@ -50,7 +53,10 @@ const App: React.FC = () => {
         <div className="bg-gradient-to-b  from-sky-300 via-10% to-dappnodeBgLight dark:from-indigo-950 dark:to-dappnodeBgDarkLayout">
           <Navbar theme={theme} onThemeToggle={toggleTheme} />
           <Hero />
+          <Basics />
         </div>
+        <HowItWorks />
+        <Benefits />
         <About />
       </main>
       <Footer />

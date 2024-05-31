@@ -67,10 +67,6 @@ const About: React.FC = () => {
     <motion.div
       id="about"
       className="flex min-h-screen flex-col items-center justify-around bg-cover text-center  "
-      style={{
-        backgroundImage:
-          'url("https://example.com/path-to-your-background-image.jpg")',
-      }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
