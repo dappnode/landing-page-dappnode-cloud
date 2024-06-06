@@ -2,7 +2,10 @@ import Button from "./Button";
 
 export default function Basics() {
   return (
-    <div className="flex w-full items-center justify-center  p-5">
+    <div
+      className="flex w-full items-center justify-center bg-purple-100 p-5 dark:bg-indigo-950 md:py-36"
+      id="basics"
+    >
       <div className="flex w-full flex-col  items-center justify-center gap-10 text-center md:w-4/5 xl:w-3/5">
         <h2>What is Dappnode Cloud?</h2>
         <div className="flex flex-col gap-10">

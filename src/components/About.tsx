@@ -66,7 +66,7 @@ const About: React.FC = () => {
   return (
     <motion.div
       id="about"
-      className="flex min-h-screen flex-col items-center justify-around bg-cover text-center  "
+      className="flex min-h-screen flex-col items-center justify-around bg-cover"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

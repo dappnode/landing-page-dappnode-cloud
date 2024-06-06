@@ -50,12 +50,12 @@ const App: React.FC = () => {
         "App flex min-h-screen flex-col bg-dappnodeBgLightLayout dark:bg-dappnodeBgDarkLayout"
       }
     >
-      <main className="flex flex-1 flex-col gap-24 lg:gap-36 xl:gap-52">
+      <main className="flex flex-1 flex-col gap-24 lg:gap-36 ">
         <div className="bg-gradient-to-b  from-sky-300 via-10% to-dappnodeBgLight dark:from-indigo-950 dark:to-dappnodeBgDarkLayout">
           <Navbar theme={theme} onThemeToggle={toggleTheme} />
           <Hero />
-          <Basics />
         </div>
+        <Basics />
         <Carousel />
         <HowItWorks />
         <Benefits />

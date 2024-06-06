@@ -51,15 +51,16 @@ export default function Carousel() {
   }, [currentIndex]);
 
   return (
-    <div className="mx-5 flex flex-col gap-10 lg:mx-[5%] lg:flex-row lg:gap-20 xl:mx-[10%] xl:gap-52">
-      <div className="relative flex min-h-max w-full flex-col  lg:w-2/5">
-        <div className="flex h-3/4 flex-col items-center justify-center gap-10 text-center">
+    <div className="mx-5 flex flex-col-reverse gap-10 lg:mx-[5%] lg:flex-row lg:gap-20 xl:mx-[10%] xl:gap-52">
+      <div className="relative flex min-h-max w-full flex-col-reverse justify-between  lg:w-2/5 lg:flex-col ">
+        <div />
+        <div className="flex flex-col items-center justify-center gap-10 text-center ">
           <h2 className="lg:text-3xl xl:text-5xl">
             {slides[currentIndex].title}
           </h2>
           <p className="lg:text-xl xl:text-2xl">{slides[currentIndex].text}</p>
         </div>
-        <div className="mt-10 flex h-1/4 flex-row items-center justify-center gap-5">
+        <div className="mb-10 flex h-7 flex-row items-center justify-center gap-5 lg:mb-0">
           {slides.map((slides, index) => (
             <button
               className={`h-3 w-3 rounded-full  ${index === currentIndex ? "bg-dappnodePurple" : "bg-gray-400"}`}

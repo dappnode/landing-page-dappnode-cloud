@@ -6,12 +6,18 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="relative flex h-[50vh] items-center justify-center overflow-hidden  "
+      className="relative flex h-[70vh] items-center justify-center overflow-hidden  "
     >
       {/*Initial clouds -> ONLY APPEAR ONCE */}
       <div className="absolute flex h-full w-screen translate-x-[100%] animate-cloud-initial">
         <CloudSvg color="#FC9E22" size={100} right="0px" top="100px" />
-        <CloudSvg color="#9333ea" size={200} left="80px" top="20px" />
+        <CloudSvg
+          color="#9333ea"
+          size={200}
+          left="80px"
+          top="20px"
+          classname="hidden md:block"
+        />
         <CloudSvg color="#FC9E22" size={50} left="400px" bot="50px" />
         <CloudSvg color="#00B1F4" size={80} left="60%" top="70%" />
         <CloudSvg color="#E60AF6" size={100} right="200px" bot="150px" />
@@ -40,8 +46,8 @@ export default function Hero() {
       Elevate Your Blockchain Experience
       */}
       <div className="flex flex-col text-center">
-        <h1>Dappnode Cloud</h1>
-        <h3 className="text-3xl text-black dark:text-dappnodeDarkText">
+        <h1 className="text-4xl md:text-6xl xl:text-8xl">Dappnode Cloud</h1>
+        <h3 className="text-xl text-black dark:text-dappnodeDarkText md:text-2xl xl:text-3xl">
           No hardware? No Problem!
         </h3>
       </div>
@@ -52,7 +58,7 @@ export default function Hero() {
         <CloudSvg color="#FC9E22" size={50} right="500px" top="40%" />
         <CloudSvg color="#E60AF6" size={150} left="60%" bot="5px" />
       </div>
-      <div className="absolute flex h-full w-screen animate-cloud-slow">
+      <div className="absolute hidden h-full w-screen animate-cloud-slow md:block lg:flex">
         <CloudSvg color="#00B1F4" size={200} left="5px" top="0px" />
         <CloudSvg color="#9333ea" size={250} right="25%" bot="7%" />
       </div>
@@ -67,6 +73,7 @@ function CloudSvg({
   right = undefined,
   bot = undefined,
   left = undefined,
+  classname = "",
 }: {
   color: string;
   size: number;
@@ -74,9 +81,11 @@ function CloudSvg({
   right?: string | undefined;
   bot?: string | undefined;
   left?: string | undefined;
+  classname?: string;
 }) {
   return (
     <div
+      className={classname}
       style={{
         height: `${size}px`,
         width: `${size}px`,
