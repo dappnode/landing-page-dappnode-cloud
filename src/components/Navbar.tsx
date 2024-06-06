@@ -14,16 +14,16 @@ const pages: {
   path: string;
 }[] = [
   {
-    name: "About",
-    path: "#about",
+    name: "Basics",
+    path: "#basics",
   },
   {
-    name: "About",
-    path: "#about",
+    name: "How it works",
+    path: "#howItWorks",
   },
   {
-    name: "About",
-    path: "#about",
+    name: "Benefits",
+    path: "#benefits",
   },
   {
     name: "About",
@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
   };
 
   return (
-    <div className="relative -mb-14 w-full bg-gradient-to-b  from-dappnodePurple/30 via-dappnodePurple/15 via-20% pb-14 dark:from-dappnodePurple/15 lg:-mb-0 lg:px-10">
+    <div className="relative -mb-14 lg:-mb-0 lg:px-10" style={{ zIndex: 10 }}>
       <nav className="flex items-center justify-between  p-4 lg:p-6">
         <div className="flex items-center justify-start py-3">
           <button
@@ -60,17 +60,17 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
                 className="mr-4 h-12"
               />
               <span className="mt-3 text-xl font-bold text-gray-900 dark:text-white lg:text-2xl">
-                Landing Page
+                Dappnode
               </span>
             </div>
           </div>
         </div>
 
         {/* Mobile logo */}
-        <div className="flex w-full flex-row items-center justify-center  pr-10 lg:hidden">
+        <div className="flex w-full flex-row items-center justify-center pr-10 lg:hidden">
           <img src="dappnode-logo-only.png" alt="Logo" className="mr-4 h-8" />
           <span className="mt-3 text-xl font-bold text-gray-900 dark:text-white lg:text-2xl">
-            Landing Page
+            Dappnode
           </span>
         </div>
 
@@ -85,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
         <div className="flex items-center">
           <button
             onClick={onThemeToggle}
-            className="hidden rounded-full p-2 text-xl text-gray-600 transition-all ease-in-out hover:bg-purple-300 dark:text-gray-300 dark:hover:bg-purple-950 lg:inline-block"
+            className="hidden rounded-full p-2 text-xl text-gray-600 hover:bg-sky-200 dark:text-gray-300 dark:hover:bg-indigo-900 lg:inline-block"
           >
             {theme === "light" ? <FaMoon /> : <MdSunny />}
           </button>
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
       </nav>
       {isMenuOpen && (
         <motion.div
-          className="   p-4 lg:hidden"
+          className="p-4 lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
             ))}
             <button
               onClick={onThemeToggle}
-              className="rounded-full p-2 text-xl text-gray-600 transition-all ease-in-out hover:bg-purple-200 dark:text-gray-300 dark:hover:bg-purple-950"
+              className="rounded-full p-2 text-xl text-gray-600 transition-all ease-in-out hover:bg-sky-200 dark:text-gray-300 dark:hover:bg-indigo-900"
             >
               {theme === "light" ? <FaMoon /> : <MdSunny />}
             </button>

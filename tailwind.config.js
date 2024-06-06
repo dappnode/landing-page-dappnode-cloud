@@ -32,6 +32,22 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         modeg: ["modeg", "sans-serif"],
       },
+      keyframes: {
+        moveInitial: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        moveLeftToRight: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        "cloud-initial": "moveInitial 150s  linear ",
+        "cloud-slow": "moveLeftToRight 250s  linear infinite",
+        "cloud-mid": "moveLeftToRight 200s  linear infinite",
+        "cloud-fast": "moveLeftToRight 150s  linear infinite",
+      },
     },
   },
   variants: {

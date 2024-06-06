@@ -6,6 +6,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e9d5ff;
+}
+
+/* scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #581c87;
+  transition: width 2s ease-in-out;
+}
+
 @layer base {
   html {
     @apply font-modeg;
