@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { FiArrowUp } from "react-icons/fi";
-import About from "./components/About";
 import "./App.css";
 import Hero from "./components/Hero";
 import Basics from "./components/Basics";
@@ -59,7 +58,6 @@ const App: React.FC = () => {
         <Carousel />
         <HowItWorks />
         <Benefits />
-        <About />
       </main>
       <Footer />
       {showScrollTop && (
